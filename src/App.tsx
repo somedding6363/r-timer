@@ -14,7 +14,7 @@ const App = () => {
   const [timerRef, { height: timerHeight }] = useMeasure();
   const [panelRef, { height: panelHeight }] = useMeasure();
   const fontSize = useResponsiveFontSize(timerHeight);
-  const { time, start, setInitialTime } = useTimer();
+  const { time, baseTime, start, setInitialTime } = useTimer();
 
   const handlePanelOpen = () => {
     setIsPanelOpen((prev) => !prev);
@@ -50,7 +50,7 @@ const App = () => {
         </div>
       </div>
       {/* 세팅 */}
-      <Modal time={time} setInitialTime={setInitialTime} />
+      <Modal baseTime={baseTime} setInitialTime={setInitialTime} />
       {/* 점수 판 */}
       <button
         onClick={handlePanelOpen}

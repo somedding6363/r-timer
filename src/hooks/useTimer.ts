@@ -65,7 +65,7 @@ const useTimer = (initialTime: number = 60) => {
     };
   }, []);
 
-  return { time, start, setInitialTime };
+  return { time, baseTime, start, setInitialTime };
 };
 
 export default useTimer;
