@@ -4,8 +4,6 @@ import { Cog6ToothIcon, XMarkIcon } from "@heroicons/react/24/outline";
 interface ModalProps {
   time: number;
   setInitialTime: (newTime: number) => void;
-  isStartView: boolean;
-  setIsStartView: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Modal = ({ time, setInitialTime }: ModalProps) => {

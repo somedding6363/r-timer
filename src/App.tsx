@@ -11,8 +11,6 @@ import Panel from "./Panel";
 const App = () => {
   // 점수 판 열림 유무
   const [isPanelOpen, setIsPanelOpen] = useState<boolean>(false);
-  // 시작 버튼 표시 유무
-  const [isStartView, setIsStartView] = useState<boolean>(false);
   const [timerRef, { height: timerHeight }] = useMeasure();
   const [panelRef, { height: panelHeight }] = useMeasure();
   const fontSize = useResponsiveFontSize(timerHeight);
@@ -52,12 +50,7 @@ const App = () => {
         </div>
       </div>
       {/* 세팅 */}
-      <Modal
-        time={time}
-        setInitialTime={setInitialTime}
-        isStartView={isStartView}
-        setIsStartView={setIsStartView}
-      />
+      <Modal time={time} setInitialTime={setInitialTime} />
       {/* 점수 판 */}
       <button
         onClick={handlePanelOpen}
